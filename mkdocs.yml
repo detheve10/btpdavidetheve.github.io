@@ -1,0 +1,165 @@
+site_name: LAB's Cr0wth
+site_description: Cours de STI2D
+site_author: Christopher CHAMAND
+
+docs_dir: docs
+
+nav:
+- "<img src='https://christopherchamand.github.io/icones/home.svg' width=16px height=16px>&thinsp; Accueil" :
+    - index.md
+- "<img src='https://christopherchamand.github.io/icones/list-unordered-16.svg' width=16px height=16px>&thinsp; STI2D":
+    - "Présentation" : STI2D/index_sti2d.md
+    - "Les formules" : STI2D/formules/les_formules.md 
+    - "Première" :
+      - "I2D" : 
+        - "Présentation" : STI2D/I2D/index_i2d.md
+        - "Séquence 0 : Découverte du Développement Durable" : STI2D/I2D/Seq0/i2d_seq0.md
+        - "Séquence 1 : Ingénierie système" : STI2D/I2D/Seq1/i2d_seq1.md
+        - "Séquence 2 : Signaux et Information" : STI2D/I2D/Seq2/i2d_seq2.md
+        - "Séquence 3 : Éco-Conception" : STI2D/I2D/Seq3/i2d_seq3.md
+        - "Séquence 4 : Les flux" : STI2D/I2D/Seq4/i2d_seq4.md
+        - "Séquence 5 : Typologie de l'information, de l'énergie et des liaisons" : STI2D/I2D/Seq5/i2d_seq5.md
+        - "Séquence 6 : Notion d'architecture et construction" : STI2D/I2D/Seq6/i2d_seq6.md
+        - "Séquence 7 : Programmation web" : STI2D/I2D/Seq7/i2d_seq7.md
+      #- "IT à venir..." : ..#
+    #- "Terminale" :
+      #- "2I2D à venir..." : ..#
+    - "ENS. SPÉCIFIQUE" :
+      - "AC" : 
+        - "Présentation" : STI2D/AC/index_ac.md
+        - "Séquence 0: Découverte" : STI2D/AC/Seq0/ac_seq0.md
+        - "Séquence 1: La descente de charges" : STI2D/AC/Seq1/ac_seq1.md
+        - "Séquence 2: La résistance des matériaux" : STI2D/AC/Seq2/ac_seq2.md
+        - "Séquence 3: Modélisation des systèmes" : STI2D/AC/Seq3/ac_seq3.md
+        - "Séquence 4: Confort thermique" : STI2D/AC/Seq4/ac_seq4.md
+        - "Séquence 5: Confort acoustique" : STI2D/AC/Seq5/ac_seq5.md
+- "<img src='https://christopherchamand.github.io/icones/list-unordered-16.svg' width=16px height=16px>&thinsp; SNT" : 
+    - "Présentation" : SNT/index_snt.md
+    - "Chapitre 1 : Le WEB" : SNT/web/index_web.md
+    - "Chapitre 2 : Python" : SNT/python/index_python.md
+
+
+    #- "ETLV 1ère" : STI2D/ETLV/index_ETLV-P.md
+    #- "ETLV Tle" : STI2D/ETLV/index_ETLV-T.md
+
+theme:
+  #favicon: icones/icons8-cours-100.png
+  favicon: icones/icons8-prof-64.png
+  icon:
+    #logo: fontawesome/brands/debian
+    logo: fontawesome/solid/circle-radiation
+    #logo: fontawesome/brands/d-and-d
+    #logo: fontawesome/solid/jedi
+    #logo: fontawesome/brands/mandalorian
+    #logo: fontawesome/solid/dragon
+  
+  name: material
+  language: fr
+
+  features:
+      - navigation.tabs
+      - navigation.tabs.sticky
+      - navigation.sections
+      - navigation.top
+      #- navigation.expand
+      #- navigation.instant
+      #- navigation.instant.prefetch
+      #- navigation.tracking
+      - navigation.path
+      - navigation.indexes
+      #- navigation.footer
+
+      #- toc.follow
+      #- toc.integrate
+
+      - search.suggest
+      - search.highlight
+      - search.share
+      
+      - content.tabs.link
+      - content.code.annotation
+      - content.code.copy
+      - content.code.annotate 
+
+  palette:
+    - scheme: default
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Darkmode
+      primary: teal
+      accent: amber
+    - scheme: slate
+      toggle:
+        icon: material/toggle-switch
+        name: Lightmode
+      primary: teal
+      accent: lime
+
+extra:
+  # consent:
+  #   title: Cookie consent
+  #   description: >- 
+  #     We use cookies to recognize your repeated visits and preferences, as well
+  #     as to measure the effectiveness of our documentation and whether users
+  #     find what they're searching for. With your consent, you're helping us to
+  #     make our documentation better.
+  #   actions:
+  #     - accept
+  #     - reject
+  social:
+    - icon: fontawesome/brands/github-alt
+      link: https://github.com/cr0wth/
+
+markdown_extensions:
+  - pymdownx.inlinehilite
+  - pymdownx.mark
+  - pymdownx.tilde
+  - pymdownx.caret
+  - pymdownx.snippets
+  - pymdownx.details
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.superfences:
+    # Exception pour code highlight (de façon à faire fonctionner mermaid)
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - pymdownx.tabbed:
+      alternate_style: true          # Volets glissants.  === "Mon volet"
+  - pymdownx.tasklist:            # Cases à cocher  - [ ]  et - [x]
+        custom_checkbox: true   #   avec cases d'origine
+        clickable_checkbox: true    #   et cliquables.
+  - pymdownx.keys:
+      strict: false
+  - footnotes
+  - attr_list
+  # Permet l'utilisation d'abbréviation dans le fichier syntaxe *[abbr]: description (voir glossaire.md)
+  - abbr
+  # Permet l'insertion de fichiers dans le document à l'aide de la syntaxe --8<-- "includes/glossaire.md"
+  - pymdownx.snippets
+  # Admonitions et variantes (details : repliable, superfences : avec onglet)
+  - admonition
+
+plugins:
+  - search
+#  - macros
+
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+  - javascripts/katex.js 
+  - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.js  
+  - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/contrib/auto-render.min.js
+
+extra_css:
+  - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.css
+
+copyright: |
+  &copy; 2023 <a href="" target="_blank" rel="noopener">Christopher CHAMAND</a>
