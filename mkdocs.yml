@@ -1,3 +1,14 @@
+### IMPORTANT AVANT L'INSTALLATION
+## sudo apt update
+## sudo apt install python3-pip
+## pip install mkdocs
+## pip install mkdocs-material
+## pip install mkdocs-material-extensions
+## pip install pymdown-extensions
+## mkdocs new .
+## mkdocs build
+## mkdocs gh-deploy
+
 site_name: BTP David ETHEVE
 site_description: Cours de génie civil
 site_author: David ETHEVE
@@ -5,9 +16,8 @@ site_author: David ETHEVE
 docs_dir: docs
 
 nav:
-- "<img src='https://christopherchamand.github.io/icones/home.svg' width=16px height=16px>&thinsp; Accueil" :
-    - index.md
-- "<img src='https://christopherchamand.github.io/icones/list-unordered-16.svg' width=16px height=16px>&thinsp; STI2D":
+- "Accueil" : index.md
+- "STI2D":
     - "Présentation" : STI2D/index_sti2d.md
     - "Les formules" : STI2D/formules/les_formules.md 
     - "Première" :
@@ -17,7 +27,7 @@ nav:
 
 theme:
   #favicon: icones/icons8-cours-100.png
-  favicon: icones/icons8-prof-64.png
+  #favicon: icones/icons8-prof-64.png
   icon:
     #logo: fontawesome/brands/debian
     logo: fontawesome/solid/circle-radiation
