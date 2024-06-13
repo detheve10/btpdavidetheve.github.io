@@ -17,13 +17,7 @@ docs_dir: docs
 
 nav:
 - "Accueil" : index.md
-- "STI2D":
-    - "Présentation" : STI2D/index_sti2d.md
-    - "Les formules" : STI2D/formules/les_formules.md 
-    - "Première" :
-      - "I2D" : 
-        - "Présentation" : STI2D/I2D/index_i2d.md
-        - "Séquence 0 : Découverte du Développement Durable" : STI2D/I2D/Seq0/i2d_seq0.md
+- "Test" : Test/index_test.md
 
 theme:
   #favicon: icones/icons8-cours-100.png
